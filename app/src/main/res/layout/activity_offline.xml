@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/bg_login"
+    android:id="@+id/relative">
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:src="@drawable/bg_login"
+        android:scaleType="fitXY"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="My Library"
+                android:textColor="@color/White"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_songs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/ll_title"
+            android:layout_weight="6"
+            tools:listitem="@layout/item_songs"></android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/rv_songs"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_height="0dp">
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="240dp"
+                android:secondaryProgressTint="@color/White"
+                android:layout_marginTop="20dp"
+                android:progress="0"
+                android:layout_marginLeft="40dp"
+                android:pointerIcon="crosshair"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/tv_time_run"
+                android:layout_width="30dp"
+                android:text="00:00"
+                android:textSize="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/White"
+                android:layout_height="20dp" />
+            <TextView
+                android:id="@+id/tv_time_total"
+                android:layout_width="40dp"
+                android:text="00:00"
+                android:textSize="10dp"
+                android:layout_toRightOf="@+id/seekbar"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/White"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/btn_shuffle"
+                android:layout_width="20dp"
+                android:background="@drawable/ic_player_shuffle"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="visible"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/btn_shuffle_on"
+                android:layout_width="20dp"
+                android:background="@drawable/ic_player_shuffle_selected"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_width="25dp"
+                android:background="@drawable/ic_player_prev"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_height="25dp" />
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="25dp"
+                android:visibility="visible"
+                android:background="@drawable/ic_player_play"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="150dp"
+                android:layout_height="25dp" />
+            <Button
+                android:id="@+id/btn_pause"
+                android:layout_width="25dp"
+                android:visibility="invisible"
+                android:background="@drawable/ic_player_pause"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="150dp"
+                android:layout_height="25dp" />
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="25dp"
+                android:background="@drawable/ic_player_next"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="190dp"
+                android:layout_height="25dp" />
+            <Button
+                android:id="@+id/btn_repeat"
+                android:layout_width="20dp"
+                android:visibility="visible"
+                android:background="@drawable/ic_player_repeat"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="260dp"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/btn_repeat_1"
+                android:layout_width="20dp"
+                android:visibility="invisible"
+                android:background="@drawable/ic_player_repeat_1"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="260dp"
+                android:layout_height="20dp" />
+            <Button
+                android:id="@+id/btn_repeat_all"
+                android:layout_width="20dp"
+                android:background="@drawable/ic_player_repeat_all"
+                android:layout_marginTop="55dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="260dp"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_image_off"
+        android:layout_width="40dp"
+        android:visibility="visible"
+        android:background="@drawable/icon_image"
+        android:layout_alignParentRight="true"
+        android:layout_height="40dp" />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_image_on"
+        android:layout_width="40dp"
+        android:visibility="invisible"
+        android:background="@drawable/image_on"
+        android:layout_alignParentRight="true"
+        android:layout_height="40dp" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/online_library"
+            android:icon="@drawable/ic_listen"
+            android:title="Online Library" />
+        <item
+            android:id="@+id/my_library"
+            android:icon="@drawable/ic_library"
+            android:title="My Library" />
+        <item
+            android:id="@+id/playlist"
+            android:icon="@drawable/ic_playlist"
+            android:title="Playlist" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:title="Settings" />
+            <item
+                android:id="@+id/help"
+                android:title="Help" />
+            <item
+                android:id="@+id/send_feedback"
+                android:title="Send Feedback"/>
+        </menu>
+    </item>
+
+</menu>

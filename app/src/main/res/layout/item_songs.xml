@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="30dp"
+        android:text=""
+        android:gravity="center"
+        android:textSize="15dp"
+        android:visibility="visible"
+        android:textColor="@color/White"
+        android:layout_height="40dp" />
+    <ImageView
+        android:id="@+id/iv_number"
+        android:layout_width="30dp"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:src="@drawable/song"
+        android:visibility="invisible"
+        android:textColor="@color/White"
+        android:layout_height="40dp" />
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/tv_number"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_name_song"
+            android:text="Ten Bai hat"
+            android:layout_width="300dp"
+            android:lines="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/White"
+            android:textSize="15dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_name_singer"
+            android:layout_width="300dp"
+            android:text="Ten ca sy"
+            android:gravity="clip_vertical"
+            android:textColor="@color/White"
+            android:textSize="13dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_more"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/ll_name"
+        android:background="@drawable/ic_more"
+        android:layout_height="30dp" />
+</RelativeLayout>
